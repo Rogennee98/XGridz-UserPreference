@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <h1>GRID CUSTOM PREVIEW</h1>
+    <!-- THe html sites used is UserPrefeferancePage.html and CustomGridPreviewPage.html-->
+    <div id="data">Customized Grid : </div>
+
+      <!-- prints out the data of row and colum here-->
+      Row:<span id = "result"></span>
+      Column:<span id = "result2"></span>
+
+ <script>
+     //This gets the data of result from the UserPref.html storage
+     document.getElementById("result").innerHTML = localStorage.getItem("txtValue") ;
+
+     //This gets the data of result2 from the UserPref.html storage
+     document.getElementById("result2").innerHTML = localStorage.getItem("txtValue2");
+ </script>
+ 
+</body>
+</html>
