@@ -2,9 +2,10 @@
 ## User Preference Page
 This page is the first page of the user preference.
 * It has two input boxs to be filled in with a number.
-* The **Answer button** will output the data and row in the current page.
-* The **Submit button** will transfer u to another page with the data of row and column.
-* From pressing the **Select image button**, it take you to the image selection page .
+* The **Preview button** will transfer u to another page with the data of row, column, and number of questions wanted.
+* The **Submit button** will transfer u to another page with the data of row, column, and number of questions wanted.
+* The **Finish button** will transfer u to supposably the home page.
+* The **choose a file button** will be updated later .
 ![Screenshot (1961)](https://user-images.githubusercontent.com/60022074/97773136-7c105480-1b0a-11eb-8f2d-1f583cc04117.png)
 
 ## Custom Grid Preview Page
