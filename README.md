@@ -5,7 +5,7 @@ This page is the first page of the user preference.
 * The **Answer button** will output the data and row in the current page.
 * The **Submit button** will transfer u to another page with the data of row and column.
 * From pressing the **Select image button**, it take you to the image selection page .
-![Screenshot (1846)](https://user-images.githubusercontent.com/60022074/96673799-25da2f00-131c-11eb-9b0f-dfe207a47391.png)
+![Screenshot (1961)](https://user-images.githubusercontent.com/60022074/97773136-7c105480-1b0a-11eb-8f2d-1f583cc04117.png)
 
 ## Custom Grid Preview Page
 This page is the second page that is linked user preference.
