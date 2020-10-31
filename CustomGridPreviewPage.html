@@ -2,18 +2,30 @@
 <html>
     <h1>GRID CUSTOM PREVIEW</h1>
     <!-- THe html sites used is UserPrefeferancePage.html and CustomGridPreviewPage.html-->
-    <div id="data">Customized Grid : </div>
+    <div id="data">Customized Grid : </div><br>
 
       <!-- prints out the data of row and colum here-->
-      Row:<span id = "result"></span>
-      Column:<span id = "result2"></span>
+      Row:<span id = 'result'></span>
+      Column:<span id = 'result2'></span><br>
+      No. of Questions:<span id = 'result3'></span>
+      <!-- Picture:<span id = 'result4'></span>
+      <img id="blah" alt="your image" width="50" height="50" ></span> -->
+
 
  <script>
      //This gets the data of result from the UserPref.html storage
-     document.getElementById("result").innerHTML = localStorage.getItem("txtValue") ;
+     document.getElementById('result').innerHTML = localStorage.getItem('Row') ;
 
      //This gets the data of result2 from the UserPref.html storage
-     document.getElementById("result2").innerHTML = localStorage.getItem("txtValue2");
+     document.getElementById('result2').innerHTML = localStorage.getItem('Column');
+
+     //This gets the data of result2 from the UserPref.html storage
+     document.getElementById('result3').innerHTML = localStorage.getItem('Questions');
+
+     //This gets the data of result4 from the UserPref.html storage
+    //  document.getElementById('blah').innerHTML = localStorage.getItem('Picture');
+
+   
  </script>
  
 </body>
