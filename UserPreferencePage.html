@@ -1,105 +1,119 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-        p {text-align: center;}
-        h1 {text-align: center;}
-        </style>
+    
+        <link href="UserPrefStyling.css" type="text/css" rel="stylesheet">
     </head>
 
 <body>
-    <h1>USER PREFERENCE</h1>
+    <!-- <h1>USER PREFERENCE</h1> -->
 
-    <!-- NEED TO STILL PUT IN THE PART TO CUSTOMIZE THE IMAGES -->
+    <div class="topnav">
+        <p class = "xgridz">XGridz</p>
+          <a href="#"><strong>About</strong></a>
+          <a href="#"><strong>Profile</strong></a>
+          <a href="CustomImagePage.html"><strong>Back</strong></a>
+    </div>
 
-    <!-- THe html sites used is UserPrefeferancePage.html and CustomGridPreviewPage.html -->
+    <div class="header">
+        <p><strong>User Preferences</strong></p>
+    </div>
 
-    <!-- CUSTOM GRID SECTION -->
-    <fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
+    <div class = "rectanglegreen">
+        <p class = "para"><strong>Grid customization</strong></p>
+    </div>
 
-        <!-- The linked page will be CustomGridPreviewPage.html the data of row and column will be there-->
-        <form action="CustomGridPreviewPage.html">
-         <legend>Grid Preference</legend>
-         
-          <!-- This makes the label 'Row:' and  the input box to fill a number. It only accepts numbers-->
-          <label style = "font-size: 20px;"> Row:   
-          <input type="number" name="row" id="row"/></label>
+    <!-- IM WORKING ON THIS PART !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <form action="CustomGridPreviewPage.html">
+        <div class = "rectanglewhite">
+       
+            <label  class = "cutsomGridString"><strong>Custom Grid:</strong> </label>
 
-          <!-- This makes the label 'Column:'  and  the iput box to fill a number. It only accepts numbers-->
-          <label style = "font-size: 20px;"> Column: 
-          <input type="number" name="column" id="column"/></label>
+            <label  class = "rowStuff"> Row:  </label>
+                <input type="number" name="row" id="row" min="1" max="50" class = "rowStuffTxtBox" /></label>
+
+            <label  class = "columnStuff"> Column:  </label>       
+                <input type="number" name="row" id="column" min="1" max="50" class = "columnStuffTxtBox" /></label>     
+        
+        </div>
+
+        <!-- New white rectangel container -->
+        <div class = "rectanglewhite">
+       
+            <label  class = "cutsomGridString"><strong>No. of Questions:</strong> </label>      
+                 <input type="number" name="questions" id="questions" min="1" max="50" class = "NoTxtBox" /></label> 
+            <label  class = "questionString"> Questions  </label>   
+    
+        </div>
+
+        <!-- New white rectangel container -->
+        <div class = "rectanglewhite">
+       
+            <label  class = "cutsomGridString"><strong>Choose Image:</strong> </label>      
+                 <!-- <input type="number" name="row" id="row" min="1" max="50" class = "NoTxtBox" /></label> 
+                 <input type="submit" value="Submit" onclick="getData()" class = "stringButton">  -->
+                 <input type="file" id="myFile" name="filename" class = "stringButton">
+
+        <!-- YOOOOO GO HERE FOR FILE -->
+                 <!-- <img id="blah" alt="your image" width="50" height="50" />
+                <input type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" id = "myfile2" > -->
+               
+        </div>
+
+        <!-- New white rectangel container -->
+        <div class = "rectanglewhite2">
+       
+            <!-- This button is to show the data inputted on the nextPage, is linked, calls .js function getData() -->
+          <input type="submit" value="Submit" onclick="getData()" class = "submitButton">
 
           <!-- This button is to show the data inputted on the nextPage, is linked, calls .js function getData() -->
-          <input type="submit" value="Submit" onclick="getData()">
-
-           <!-- This button is to show the data inputted on current page, calls .js function putData()-->
-          <input type="button" value="Answer" onClick="putData()"><br>
-
-          <!-- This shows label 'Row inputted:' and outputs the row data that was inputted by the user on current page -->
-          <label style = "font-size: 15px;"> Row inputted:  
-            <span id = "rowData" style ="font-size: 15px" > </span><br>
-        
-          <!-- This shows label 'Column inputted:' and outputs the column data that was inputted by the user on current page -->
-          <label style = "font-size: 15px;"> Column inputted:  
-            <span id = "columnData" style ="font-size: 15px" > </span>
-
-        </form>
-    </fieldset>
-
-    <br></br>
-
-    <!-- IMAGE PREFERENCE SECTION -->
-    <fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
-
-        <!-- The linked page will be CustomImagePage.html -->
-        <form action="CustomImagePage.html">
-         <legend>Image Preference</legend>
-          <span style = "font-size: 15px;" >Select and image</span><br>
-
-         <!-- This makes the label 'Image:' and  the input box to fill a text. -->
-         <label style = "font-size: 20px;"> Image:   
-            <input type="text" name="row" id="row"/></label>
-
-        
-           <!-- This button will take the user to another page where they can choose their image-->
-          <input type="submit" value="Select Image" ><br>
-
-
-
-        </form>
-    </fieldset>
+          <input type="submit" value="Preview" onclick="getData()" class = "previewButton">
+          
+          <!-- This button will take you back to the home page -->
+          <a href="CustomImagePage.html" class="finishButton">Finish </a>
 
     
-    <p><strong>NOTE:</strong> The Submit button will transfer u to another page with the data of row and column.</p>
-    <p><strong>NOTE:</strong> The Answer button will output the data and row in the current page.</p>
-    <p><strong>NOTE:</strong> The Select Image button will to another page where the user picks and image.</p>
+        </div>
+    </form>
+    
+    
+    <!-- THe html sites used is UserPrefeferancePage.html and CustomGridPreviewPage.html -->
    
-
+    <!-- WAS ALREADY PUT IN JS IN XGRIZD MAIN -->
     <script>
 
         function getData()
         {
             //sets this.row with the row in the html gets the value of row 
-            var row = document.getElementById("row").value;
+            var row = parseInt(document.getElementById("row").value);
 
             //sets this.column with the row in the html and gets the value of column 
-            var column = document.getElementById("column").value;
+            var column = parseInt(document.getElementById("column").value);
+
+             //sets this.column with the row in the html and gets the value of column 
+             var questions = parseInt(document.getElementById("questions").value);
+
+             //I ERASED THIS BUT CAN PUT BACK TO GET IMAGE
+            //  var picture = document.getElementById("myFile2");
+
+            
             
             //sets the the variables and put in local storage, so linked page can access data of row and colum
-            localStorage.setItem("txtValue", row);
-            localStorage.setItem("txtValue2", column);
+            localStorage.setItem('Row', row);          // localStorage.setItem("txtValue", row);
+            localStorage.setItem('Column', column);    //  localStorage.setItem("txtValue2", column);
+            localStorage.setItem('Questions', questions);
+            
+            // localStorage.setItem('Picture', picture);
             
         }
 
-        function putData()
-        {
-            //this will get the row inputted and put the data to be printed out in rowData html 
-            document.getElementById("rowData").innerHTML = " " + document.getElementById('row').value;
+       
 
-            //this will get the column inputted and put the data to be printed out in columnData html 
-            document.getElementById("columnData").innerHTML =" " + document.getElementById('column').value ;      
-            
-        }
+        
+
+
+
+       
 
         
          
