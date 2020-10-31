@@ -6,6 +6,7 @@
     </head>
 
 <body>
+    <!-- THe html sites used is UserPrefeferancePage.html and CustomGridPreviewPage.html -->
     <!-- <h1>USER PREFERENCE</h1> -->
 
     <div class="topnav">
@@ -23,8 +24,10 @@
         <p class = "para"><strong>Grid customization</strong></p>
     </div>
 
-    <!-- IM WORKING ON THIS PART !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- Action that will take user to next page-->
     <form action="CustomGridPreviewPage.html">
+
+        <!-- makes container "rectanglewhite" that contains input of row and column -->
         <div class = "rectanglewhite">
        
             <label  class = "cutsomGridString"><strong>Custom Grid:</strong> </label>
@@ -37,7 +40,7 @@
         
         </div>
 
-        <!-- New white rectangel container -->
+         <!-- makes new container "rectanglewhite" that contains input of number of questions wanted -->
         <div class = "rectanglewhite">
        
             <label  class = "cutsomGridString"><strong>No. of Questions:</strong> </label>      
@@ -46,7 +49,8 @@
     
         </div>
 
-        <!-- New white rectangel container -->
+        <!-- makes new container "rectanglewhite" that contains button of what imgae file the user wants WILL EDIT LATER -->
+        <!-- NOT SURE BOUT THIS YET, NEED TO TALK TO PAUL -->
         <div class = "rectanglewhite">
        
             <label  class = "cutsomGridString"><strong>Choose Image:</strong> </label>      
@@ -54,7 +58,7 @@
                  <input type="submit" value="Submit" onclick="getData()" class = "stringButton">  -->
                  <input type="file" id="myFile" name="filename" class = "stringButton">
 
-        <!-- YOOOOO GO HERE FOR FILE -->
+        <!-- YOOOOO GO HERE FOR FILE ___ IGNORE FOR RN -->
                  <!-- <img id="blah" alt="your image" width="50" height="50" />
                 <input type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" id = "myfile2" > -->
                
@@ -77,7 +81,7 @@
     </form>
     
     
-    <!-- THe html sites used is UserPrefeferancePage.html and CustomGridPreviewPage.html -->
+    
    
     <!-- WAS ALREADY PUT IN JS IN XGRIZD MAIN -->
     <script>
